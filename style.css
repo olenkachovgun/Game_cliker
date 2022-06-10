@@ -1,0 +1,95 @@
+/*імпортуємо шрифти*/
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    box-sizing: border-box;
+    }
+body{
+        color:#000;
+        font-family: 'Play', sans-serif;
+        height: 100vh; /* або одиниця вимірювання vh*/
+        overflow:hidden; /* сховати полосу прокрутки*/
+        margin:0;
+        text-align: center;
+    }
+a{
+    color:rgb(230, 11, 11);
+    text-decoration: none;
+    font-weight: 700;
+    border:2px solid rgb(36, 35, 35);
+    padding: 5px;
+    background: grey;
+    border-radius: 10%;
+    }
+
+a:hover{
+    color:lime;
+    
+}
+.start{
+    font-size: 2.5rem;
+}
+h1{
+    line-height: 1.4rem;
+    font-size:4rem;
+   
+}
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #0e6df2 0%,  rgb(247, 247, 9)80%);
+    transition:margin .5s ease-out;
+}
+.screen.up{
+    margin-top:-100vh;
+}
+.time-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+.time-list li{
+    margin:10px
+}
+.time-btn{
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border:2px solid #c0c0c0;
+    border-radius: 20px;
+    font-size:1.5rem;
+    color:#fff;
+    cursor:pointer;
+}
+.time-btn:hover{
+    color:#35e316;
+    border:2px solid #35e316
+}
+/*поле де відбувається гра*/
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(120deg, #a0bcdd -5%, #292f36 200%);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+}
+
+/* кульки, що будуть з"являтися на полотні*/
+.circle{
+    position:absolute;
+    border-radius: 50%;
+    cursor:pointer;
+    background: linear-gradient(90deg #29f306 0%, #156e05 47%, #58e058 100%);
+}
+.hide{opacity: 0;}
+.primary{color:#35e316}
